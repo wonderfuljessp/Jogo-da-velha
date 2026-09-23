@@ -24,7 +24,25 @@ scanf(" %c", &numero);
 for(int i = 0; i < 3; i++){
 	for(int j = 0; j < 3; j++){
 	if(tabuleiro[i][j] == numero){
-		tabuleiro[i][j] = marcacao;	
+		tabuleiro[i][j] = marcacao;
+		if(tabuleiro[0][j] == tabuleiro[1][j] && tabuleiro[0][j] == tabuleiro[2][j]){
+			for(int i = 0; i < 3; i++){
+	for(int j = 0; j < 3; j++){
+	printf(" %c", tabuleiro[i][j]);
+} 
+	printf("\n");
+} 	printf("Temos um vencedor!\n");
+			return 0;
+		}
+		if(tabuleiro[i][0] == tabuleiro[i][1] && tabuleiro[i][0] == tabuleiro[i][2]){
+			for(int i = 0; i < 3; i++){
+	for(int j = 0; j < 3; j++){
+	printf(" %c", tabuleiro[i][j]);
+} 
+	printf("\n");
+} 	printf("Temos um vencedor!\n");
+			return 0;
+		}	
 	}
 } 
 } turno++;
